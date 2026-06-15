@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <h2>Expense Tracker</h2>
+      <div class="amount-desc-container">
+        <h5>Your balance</h5>
+        <div id="balance"><span id="balance-amount" data-value="0">0</span></div>
+        <div class="income-expense-container">
+          <div id="income" class="info-cards">
+            <h6 id="income-heading">Income</h6>
+            <p><span id="income-amount" data-value="0">0</span></p>
+          </div>
+          <div id="expense" class="info-cards">
+            <h6 id="expense-heading">Expense</h6>
+            <p><span id="expense-amount" data-value="0">0</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="functions-container">
+        <div class="transaction-cards-container">
+          <!-- <div class="card income">
+            <p class="description">abc</p>
+            <p class="amount">
+              $<span class="transaction-amount">0</span>
+              <i class="fa-solid fa-x"></i>
+            </p>
+          </div>
+          <div class="card expense">
+            <p class="description">abc</p>
+            <p class="amount">$<span class="transaction-amount">0</span> <i class="fa-solid fa-x"></i></p>
+          </div> -->
+        </div>
+        <div class="transaction-form-container">
+          <h5>Add Transaction</h5>
+          <form id="transaction-form">
+            <label for="form-description">Description</label>
+            <input
+              type="text"
+              id="form-description"
+              placeholder="Enter description..."
+              required
+            />
+
+            <label for="form-amount">Amount</label>
+            <input
+              type="number"
+              id="form-amount"
+              placeholder="Enter Amount..."
+              required
+            />
+            <!-- <small class="helper-text">Use negative (-) for expenses</small> -->
+            <p class="helper-text">Use negative (-) for expenses</p>
+            <button type="submit">Add Transaction</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

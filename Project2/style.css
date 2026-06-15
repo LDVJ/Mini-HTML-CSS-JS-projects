@@ -1,0 +1,102 @@
+/* basic reset */
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+body{
+    background: linear-gradient(135deg, #83a8df, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container{
+    background-color: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: fit-content;
+    /* max-width: 800px; */
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: #333;
+}
+
+h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    height: 3px;
+    background-color: #667eea;
+    border-radius: 50%;
+}
+
+.pallete-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+}
+
+.color-box{
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+.color{
+    height: 100px;
+    width: 120px;
+    transition: background 0.5s ease-in;
+}
+
+.color-info{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 5px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:active{
+    transform: scale(0.9);
+}
+
+#generate-btn{
+    width: 12rem;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(135deg, #667eea, #8b5cf6);
+    color: white;
+    margin-bottom: 15px;
+}
+
+#generate-btn:active{
+    transform: scale(0.95);
+    background: linear-gradient(135deg, #8b5cf6,  #667eea);
+}
+

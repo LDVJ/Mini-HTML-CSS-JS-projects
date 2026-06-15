@@ -1,0 +1,47 @@
+[
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": [
+      { "text": "Venus", "correct": false },
+      { "text": "Mars", "correct": true },
+      { "text": "Jupiter", "correct": false },
+      { "text": "Saturn", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the capital city of France?",
+    "options": [
+      { "text": "Rome", "correct": false },
+      { "text": "Madrid", "correct": false },
+      { "text": "Paris", "correct": true },
+      { "text": "Berkin", "correct": false }
+    ]
+  },
+  {
+    "question": "Which symbol represents O2",
+    "options": [
+      { "text": "Gold", "correct": false },
+      { "text": "Silver", "correct": false },
+      { "text": "Oxygen", "correct": true },
+      { "text": "Iron", "correct": false }
+    ]
+  },
+  {
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "options": [
+      { "text": "Charles Dickens", "correct": false },
+      { "text": "Jane Austen", "correct": false },
+      { "text": "Mark Twain", "correct": false },
+      { "text": "William Shakespeare", "correct": true }
+    ]
+  },
+  {
+    "question": "What is the largest mammal in the world?",
+    "options": [
+      { "text": "African Elephant", "correct": false },
+      { "text": "Blue Whale", "correct": true },
+      { "text": "Giraffe", "correct": false },
+      { "text": "Great White Shark", "correct": false }
+    ]
+  }
+]

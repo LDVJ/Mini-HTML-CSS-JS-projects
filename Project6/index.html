@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Register</h1>
+      <form id="registration-form">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter Username"
+          
+        />
+        <small id="username-error"></small>
+
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Enter email"
+          
+        />
+        <small id="email-error"></small>
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+            <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter Password"
+            
+            />
+            <i class="fa-regular fa-eye" id="password-eye"></i>
+            <!-- <i class="fa-regular fa-eye-slash"></i> -->
+        </div>
+        <small id="password-error"></small>
+
+        <label for="confirm-password">Confirm Password</label>
+        <div class="password-wrapper">
+            <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            placeholder="Confirm Password"
+            
+            />
+            <i class="fa-regular fa-eye" id="confirmPassword-eye"></i>
+        </div>
+        <small id="confirmPassword-error"></small>
+
+        <button type="submit" >Register</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+
+
+// // location storage initialization
+// let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+
+// function defaultTransaction() {
+//   if (transactionCardContainer.children.length === 0) {
+//     console.log(transactionCardContainer.children.length);
+//     let emptyText = document.createElement("div");
+//     emptyText.innerText = "No Transaction Found";
+//     Object.assign(emptyText.style, {
+//       backgroundColor: "transparent",
+//       height: "100%",
+//       width: "100%",
+//       display: "flex",
+//       justifyContent: "center",
+//       alignItems: "center",
+//     });
+//     transactionCardContainer.append(emptyText);
+//   }
+// }
+
+// // fixed status types
+// const AmountType = Object.freeze({
+//   INCOME: "income",
+//   EXPENSE: "expense",
+// });
+
+// formAmount.addEventListener("wheel", (e) => {
+//   e.preventDefault();
+// });
+
+// let type = null;
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   let description = formDescriptionValue.value;
+//   let amount = formatAmount(parseFloat(formAmountValue.value));
+
+//   const sortedTransactions = [...transactions].reverse();
+
+//   sortedTransactions.forEach((transaction) => {
+//     // const
+//   });
+
+//   let newCard = document.createElement("div");
+//   if (amount < 0) {
+//     amount = Math.abs(amount);
+//     type = AmountType.EXPENSE;
+//   } else {
+//     newCard.classList.add("card", "income");
+//     type = AmountType.INCOME;
+//   }
+//   let paymenStatus = true;
+//   if (type === AmountType.EXPENSE) {
+//     // +balanceSpan.innerText >= amount // this also compres
+//     if (formatAmount(parseFloat(balanceSpan.dataset.value)) >= amount) {
+//       newCard.classList.add("card", "expense");
+//     } else {
+//       paymenStatus = false;
+//     }
+//   }
+//   if (paymenStatus === true) {
+//     transactions.push({
+//       id: Date.now(),
+//       description,
+//       amount,
+//       type,
+//     });
+//     localStorage.setItem("transactions", JSON.stringify(transactions));
+
+//     amountDesc(amount, type);
+//     newCard.innerHTML = `<p class="description">${description}</p>
+//         <p class="amount">
+//         $<span class="transaction-amount">${amount}</span>
+//         <i class="fa-solid fa-x"></i>
+//         </p>`;
+//     transactionCardContainer.appendChild(newCard);
+//     formDescriptionValue.value = "";
+//     formAmountValue.value = "";
+//   }
+// });
+
+// function amountDesc(amount, type) {
+//   if (type === AmountType.EXPENSE) {
+//     balanceSpan.dataset.value = parseFloat(balanceSpan.dataset.value) - amount;
+
+//     let currentExpense = parseFloat(expenseAmountSpan.dataset.value);
+//     expenseAmountSpan.dataset.value = currentExpense + amount;
+//   } else if (type === AmountType.INCOME) {
+//     balanceSpan.dataset.value = parseFloat(balanceSpan.dataset.value) + amount;
+
+//     let currentIncome = parseFloat(incomeAmountSpan.dataset.value);
+//     incomeAmountSpan.dataset.value = currentIncome + amount;
+//   }
+// }
+
+// transactionCardContainer.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("fa-x")) {
+//     let cardToDelete = e.target.closest(".card");
+//     let cardAmount = parseFloat(
+//       cardToDelete.querySelector(".transaction-amount").dataset.value,
+//     );
+
+//     if (cardToDelete.classList.contains("income")) {
+//       balanceSpan.dataset.value = parseFloat(balanceSpan.dataset.value) - cardAmount;
+//       incomeAmountSpan.dataset.value =
+//         parseFloat(incomeAmountSpan.dataset.value) - cardAmount;
+//     } else if (cardToDelete.classList.contains("expense")) {
+//       balanceSpan.dataset.value = parseFloat(balanceSpan.dataset.value) + cardAmount;
+//       expenseAmountSpan.dataset.value =
+//         parseFloat(expenseAmountSpan.dataset.value) - cardAmount;
+//     }
+//     cardToDelete.remove();
+
+//     // let deleteId =
+//   }
+// });
+
+// function renderTransactions() {
+//   transactionCardContainer.innerHTML = "";
+
+//   transactions.forEach((transaction) => {
+//     let newCard = document.createElement("div");
+//     newCard.classList.add("card", transaction.type);
+//     newCard.innerHTML = `<p class="description">${transaction.description}</p>
+//         <p class="amount">
+//         $<span class="transaction-amount">${transaction.amount}</span>
+//         <i class="fa-solid fa-x"></i>
+//         </p>`;
+//     transactionCardContainer.append(newCard);
+//   });
+
+//   recalculateSummary();
+//   // defaultTransaction()
+// }
+
+// function recalculateSummary() {
+//   let balance = 0,
+//     income = 0,
+//     expense = 0;
+//   transactions.forEach((transaction) => {
+//     if (transaction.type === AmountType.INCOME) {
+//       balance += transaction.amount;
+//       income += transaction.amount;
+//     } else if (transaction.type === AmountType.EXPENSE) {
+//       expense += transaction.amount;
+//       balance -= transaction.amount;
+//     }
+//   });
+//   balanceSpan.dataset.value = balance;
+//   incomeAmountSpan.dataset.value = income;
+//   expenseAmountSpan.dataset.value = expense;
+
+//   balanceSpan.innerText = formatAmount(balance);
+//   incomeAmountSpan.innerText = formatAmount(income);
+//   expenseAmountSpan.innerText = formatAmount(expense);
+// }
+
+// function formatAmount(number){
+//   return new Intl.NumberFormat("en-US",{
+//     style:"currency",
+//     currency:"USD"
+//   }).format(number)
+// }
+
+renderTransactions();
