@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --primary-background: #1A1A1A;
+    --secondary-background: #252525;
+    --field-background: #333333;
+    --primary: #46E176;
+    --primary-hover: #32d164;
+    --placeholder: #9B999B;
+    --button-font: #000300;
+    --dropshadow:#151515;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-background);
+}
+
+.main-container{
+    width: 45%;
+    background-color: var(--secondary-background);
+    padding: 25px;
+    box-shadow: 0 6px 8px #151515;
+    height: fit-content;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: slideIn 0.3s ease-in;
+    transition: all 0.3s;
+}
+
+@keyframes slideIn{
+    from{
+        transform: translateY(10%);
+        opacity: 0.3;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.main-container .meta-container h1{
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.main-container .meta-container p{
+    font-size: 0.9rem;
+    color: var(--placeholder);
+    /* margin-bottom: 20px;     */
+}
+
+.column-fields-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.input-wrapper{
+    display: flex;
+    width: 100%;
+    /* background-color: green; */
+    /* border: 1px solid blue; */
+    /* padding: 10px; */
+    position: relative;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 2px;
+}
+
+.input-wrapper input{
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    background-color: var(--field-background);
+    outline: none;
+    border: 1px solid var(--secondary-background);
+    border-radius: 8px;
+    color: var(--placeholder);
+    font-weight: 6x00;
+}
+
+.input-wrapper input::placeholder{
+    color: var(--placeholder);
+    font-size: 0.8rem;
+}
+
+.input-wrapper i{
+    position: absolute;
+    color: var(--primary);
+    padding-left: 12px;
+}
+
+.input-wrapper textarea{
+    width: 100%;
+    height: 8rem;
+    resize: none;
+    border-radius: 8px;
+    padding: 10px 10px 10px 35px;
+    background-color: var(--field-background);
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    color: var(--placeholder);
+    line-height: 22px;
+    scrollbar-width: none;
+}
+
+.input-wrapper textarea:focus{
+    border: 1px solid #46E176;
+}
+.input-wrapper input:focus{
+    border: 1px solid #46E176;
+}
+
+
+
+.input-wrapper textarea::placeholder{
+    color: var(--placeholder);
+
+}
+
+.text-field-container .input-wrapper i{
+    display: flex;
+    height: 100%;
+    padding: 10px;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--primary-hover);
+    box-shadow: 0 2px 4px rgba(3, 234, 72, 0.8);
+}
+
+button:focus{
+    transform: scale(0.99);
+}
+
+form{
+    border-bottom: 1px solid #333;
+}
+
+.footer-info-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-wrapper i{
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.footer-wrapper p{
+    color: var(--placeholder);
+    font-size: 0.8rem;
+}
+
+@media(max-width:1400px){
+    .main-container{
+        width: 50%;
+    }
+}
+@media(max-width:1200px){
+    .main-container{
+        width: 60%;
+    }
+}
+@media(max-width:800px){
+    .main-container{
+        width: 70%;
+    }
+}
+@media(max-width:600px){
+    .main-container{
+        width: 90%;
+    }
+}
+@media(max-width:400px){
+    .main-container{
+        width: 90%;
+    }
+    .column-fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: fit-content;
+    }
+    .column-fields-container input{
+        height: 2.5rem;
+    }
+}
